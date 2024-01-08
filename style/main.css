@@ -1,0 +1,207 @@
+/* Start variables */
+:root {
+        /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%); 
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+        /* Primary */
+
+        /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+        /* Neutral */
+}
+/* End variables */
+/* Global Rules */
+::selection {
+  color: #fff;
+  background-color: var(--Soft-Pink);
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  font-size: 15px;
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--Very-Light-Gray);
+}
+/* Global Rules */
+/* Start The Design */
+/* Start Title  */
+.title {
+  width: fit-content;
+  margin: 0 auto 80px;
+  text-align: center;
+  max-width: 500px;
+}
+.title h1 {
+  color: var(--Very-Dark-Blue);
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 200;
+}
+.title h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--Very-Dark-Blue);
+
+}
+.title p {
+  line-height: 1.6;
+  color: var(--Grayish-Blue);
+}
+/* End Title  */
+/* Start Cards */
+.cards-contanier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.mid-cards .card:first-child {
+  margin-bottom: 30px;
+}
+.card {
+   min-width: 300px;
+   max-width: 400px;
+   height: 250px;
+   padding: 30px;
+   position: relative;
+   background-color: #fff;
+   border-radius: 0px 0px 10px 10px;
+   -webkit-border-radius: 0px 0px 10px 10px;
+   -moz-border-radius: 0px 0px 10px 10px;
+   -ms-border-radius: 0px 0px 10px 10px;
+   -o-border-radius: 0px 0px 10px 10px;
+   box-shadow: 0px 3px 15px 0px var(--Grayish-Blue),   0px 10px 15px -10px var(--Blue);
+   transition: 0.3s;
+   -webkit-transition: 0.3s;
+   -moz-transition: 0.3s;
+   -ms-transition: 0.3s;
+   -o-transition: 0.3s;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card.card.team-leader::before {
+  background-color: var(--Red);
+}
+.card.card.karma::before {
+  background-color: var(--Orange);
+}
+.card.card.supervisor::before {
+  background-color: var(--Cyan);
+}
+.card.card.calc::before {
+  background-color: var(--Blue);
+}
+.card h2 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.card p {
+  color: var(--Grayish-Blue);
+  line-height: 1.6;
+}
+.card img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+@media (min-width: 768px) {
+  .card:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+}
+/* End Cards */
+/* Start Responsive */
+@media (max-width: 767px) {
+  .cards-contanier {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .title {
+    padding: 10px;
+  }
+  .title h1,
+  .title h2 {
+    font-size: 28px;
+  }
+  .title p {
+    font-size: 18px;
+  }
+}
+/* End Responsive */
+/* End The Design */
+
+/* .card.red-card {
+  bottom: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.card.card.red-card::before {
+  background-color: var(--Red);
+}
+.card.blue-card {
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.card.card.blue-card::before {
+  background-color: var(--Orange);
+}
+.card.yellow-card {
+  top: 65%;
+  right: 52%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.card.card.yellow-card::before {
+  background-color: var(--Cyan);
+}
+.card.green-card {
+  top: 65%;
+  left: 52%;
+  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+}
+.card.card.green-card::before {
+  background-color: var(--Blue);
+} */
