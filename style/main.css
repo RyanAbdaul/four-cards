@@ -15,9 +15,18 @@
 }
 /* End variables */
 /* Global Rules */
+::-webkit-scrollbar {
+  width: 30px;
+}
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--Cyan);
+}
 ::selection {
   color: #fff;
-  background-color: var(--Soft-Pink);
+  background-color: var(--Cyan);
 }
 *,
 ::before,
