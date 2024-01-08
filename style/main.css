@@ -31,7 +31,7 @@ body {
   height: 100vh;
   font-size: 15px;
   position: relative;
-  padding: 80px 0;
+  padding: 80px 0 0;
   background-color: var(--Very-Light-Gray);
 }
 /* Global Rules */
@@ -137,6 +137,25 @@ body {
 }
 }
 /* End Cards */
+/* Start Footer */
+footer {
+  margin-top: 36px;
+  padding: 25px;
+  background: #f5f5f5;
+  border-top: 2px solid var(--Cyan);
+  text-align: center;
+  line-height: 1.6;
+}
+footer a:first-child,
+a:last-child {
+  text-decoration: none;
+  color: var(--Cyan);
+  font-weight: bold;
+}
+footer a:last-child {
+  
+}
+/* End Footer */
 /* Start Responsive */
 @media (max-width: 767px) {
   .cards-contanier {
@@ -156,52 +175,3 @@ body {
 }
 /* End Responsive */
 /* End The Design */
-
-/* .card.red-card {
-  bottom: 37%;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-.card.card.red-card::before {
-  background-color: var(--Red);
-}
-.card.blue-card {
-  top: 67%;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-.card.card.blue-card::before {
-  background-color: var(--Orange);
-}
-.card.yellow-card {
-  top: 65%;
-  right: 52%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.card.card.yellow-card::before {
-  background-color: var(--Cyan);
-}
-.card.green-card {
-  top: 65%;
-  left: 52%;
-  transform: translate(50%, -50%);
-  -webkit-transform: translate(50%, -50%);
-  -moz-transform: translate(50%, -50%);
-  -ms-transform: translate(50%, -50%);
-  -o-transform: translate(50%, -50%);
-}
-.card.card.green-card::before {
-  background-color: var(--Blue);
-} */
